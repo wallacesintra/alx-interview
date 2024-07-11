@@ -10,7 +10,6 @@
 """
 
 
-
 def minOperations(n):
     """
     Minimum Operations
