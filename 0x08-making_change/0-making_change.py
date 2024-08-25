@@ -4,7 +4,7 @@
 
 def makeChange(coins, total):
     """dynamic programming"""
-    holder = 0
+    no_of_coins = 0
     coins.sort(reverse=True)
 
     if total < 0:
@@ -12,7 +12,7 @@ def makeChange(coins, total):
 
     for coin in coins:
         if total % coin <= total:
-            holder += total // coin
+            no_of_coins += total // coin
             total = total % coin
 
-    return holder if total == 0 else -1
+    return no_of_coins if total == 0 else -1
